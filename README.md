@@ -13,7 +13,8 @@ module.exports = {
     aliases: [], // Aliases for the command
     description: '', // Description of what the command does
     usage: '', // Expected arguments
-    cooldown: 3, // Cooldown of the command in seconds, defaults to 3
+    cooldown: Int, // Cooldown of the command in seconds, defaults to 3
+    guildOnly: Bool // Whether or not the command can be executed in DMs
     execute(message, args) {
         // The actual execution of the command
     },
