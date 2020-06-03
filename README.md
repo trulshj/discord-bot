@@ -1,7 +1,6 @@
 # discord-bot
 
 ## command structure:
-
 ```javascript
 module.exports = {
     name: '', // Name of the command
