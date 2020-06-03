@@ -6,3 +6,10 @@ config.json
 
 # Linter config
 .eslintrc.json
+
+# images
+/images
+
+# Meme commands
+/commands/grillkongen.js
+/commands/jesuss.js
