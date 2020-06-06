@@ -9,3 +9,6 @@ config.json
 
 # images
 /images
+
+# Memes
+./commands/rule34.js
