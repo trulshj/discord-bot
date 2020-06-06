@@ -11,4 +11,4 @@ config.json
 /images
 
 # Memes
-./commands/rule34.js
+/commands/rule34.js
