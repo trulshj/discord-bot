@@ -1,4 +1,6 @@
-const { prefix } = process.env["PREFIX"];
+const { prefix } = require("../index");
+
+console.log(prefix);
 
 module.exports = {
   name: "help",

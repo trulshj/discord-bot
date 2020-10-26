@@ -7,6 +7,8 @@ require("dotenv").config({ path: __dirname + "/.env" });
 const prefix = process.env["PREFIX"];
 const token = process.env["TOKEN"];
 
+exports.prefix = prefix;
+
 if (!prefix | !token) {
   console.log("Missing bot token and/or prefix");
   process.exit();
