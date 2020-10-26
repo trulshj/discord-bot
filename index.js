@@ -2,8 +2,11 @@ const fs = require("fs");
 const Discord = require("discord.js");
 const fetch = require("node-fetch");
 
-const prefix = process.env.PREFIX;
-const token = process.env.TOKEN;
+require("dotenv").config({ path: __dirname + "/.env" });
+
+const prefix = process.env["PREFIX"];
+const token = process.env["TOKEN"];
+
 if (!prefix | !token) {
   console.log("Missing bot token and/or prefix");
   process.exit();

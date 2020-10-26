@@ -3,6 +3,7 @@
 
 # Configuration files
 config.json
+.env
 
 # Linter config
 .eslintrc.json
