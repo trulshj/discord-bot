@@ -7,9 +7,3 @@ config.json
 
 # Linter config
 .eslintrc.json
-
-# images
-/images
-
-# Memes
-/commands/rule34.js
