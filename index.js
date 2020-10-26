@@ -2,18 +2,14 @@ const fs = require("fs");
 const Discord = require("discord.js");
 const fetch = require("node-fetch");
 
-require("dotenv").config({ path: __dirname + "/.env" });
+require("dotenv").config();
 
-const prefix = process.env["CMD_PREFIX"];
-const token = process.env["TOKEN"];
+const prefix = process.env.CMD_PREFIX;
+const token = process.env.TOKEN;
+const ver = process.env.NODE_ENV;
 
-console.log("Current prefix: " + prefix);
-exports.prefix = prefix;
-
-if (!prefix | !token) {
-  console.log("Missing bot token and/or prefix");
-  process.exit();
-}
+console.log(`Current prefix: ${prefix}`);
+console.log(`Current environment: ${ver}\n`);
 
 const bot = new Discord.Client();
 bot.commands = new Discord.Collection();
@@ -34,6 +30,15 @@ const cooldowns = new Discord.Collection();
 // Let's us know that we are ready
 bot.once("ready", () => {
   console.info(`Connected as ${bot.user.tag}`);
+
+  if (ver == "production") {
+    bot.user.setActivity("Meget oppegående bot", {
+      type: "STREAMING",
+      url: "https://twitch.tv/lasagnegutten",
+    });
+  } else {
+    bot.user.setActivity("I kode-land", { type: "PLAYING" });
+  }
 });
 
 // Whenever there is a message, check if it is a command

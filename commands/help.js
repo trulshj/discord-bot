@@ -1,4 +1,4 @@
-const { prefix } = require("../index");
+const prefix = process.env.CMD_PREFIX;
 
 module.exports = {
   name: "help",
