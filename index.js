@@ -4,7 +4,7 @@ const fetch = require("node-fetch");
 
 require("dotenv").config({ path: __dirname + "/.env" });
 
-const prefix = process.env["PREFIX"];
+const prefix = process.env["CMD_PREFIX"];
 const token = process.env["TOKEN"];
 
 console.log("Current prefix: " + prefix);
