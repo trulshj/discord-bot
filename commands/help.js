@@ -1,7 +1,5 @@
 const { prefix } = require("../index");
 
-console.log(prefix);
-
 module.exports = {
   name: "help",
   description: "List all of my commands or get info about a specific command.",

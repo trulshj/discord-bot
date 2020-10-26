@@ -7,6 +7,7 @@ require("dotenv").config({ path: __dirname + "/.env" });
 const prefix = process.env["PREFIX"];
 const token = process.env["TOKEN"];
 
+console.log("Current prefix: " + prefix);
 exports.prefix = prefix;
 
 if (!prefix | !token) {
